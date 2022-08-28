@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import HeadComponent from '../components/head'
 import HeaderComponent from '../components/header'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <HeadComponent />
+      <HeadComponent title='About us' />
       <HeaderComponent />
     </div>
   )
