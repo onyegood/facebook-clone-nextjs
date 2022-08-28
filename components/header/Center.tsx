@@ -1,22 +1,26 @@
 import React from 'react'
 import {
-  BellIcon,
-  ChatIcon,
-  ChevronDownIcon,
   HomeIcon,
   UserGroupIcon,
-  ViewGridIcon,
 } from '@heroicons/react/solid';
 import {
   FlagIcon,
   PlayIcon,
   ShoppingCartIcon,
 } from '@heroicons/react/outline';
-import Logo from '../../common/logo';
+import HeaderIcon from './HeaderIcon';
 
  const CenterComponent = () => {
   return (
-    <Logo />
+    <div className='flex justify-center flex-grow'>
+      <div className='flex space-x-6 md:space-x-2'>
+      <HeaderIcon Icon={HomeIcon} active />
+      <HeaderIcon Icon={FlagIcon} active={false} />
+      <HeaderIcon Icon={PlayIcon} active={false} />
+      <HeaderIcon Icon={ShoppingCartIcon} active={false} />
+      <HeaderIcon Icon={UserGroupIcon} active={false} />
+      </div>
+    </div>
   )
 }
 

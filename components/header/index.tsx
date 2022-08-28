@@ -5,7 +5,8 @@ import RightComponent from './Right';
 
  const HeaderComponent = () => {
   return (
-    <div className='flex flex-row justify-between items-center'>
+    <div className='sticky top-0 z-50 bg-white
+    flex flex-row justify-between items-center p-2 lg:px-5 shadow-md'>
     <LeftComponent />
     <CenterComponent />
     <RightComponent />
