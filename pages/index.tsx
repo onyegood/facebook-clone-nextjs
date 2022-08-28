@@ -5,7 +5,7 @@ import HeaderComponent from '../components/header'
 const Home: NextPage = () => {
   return (
     <div>
-      <HeadComponent title='About us' />
+      <HeadComponent title='Facebook'/>
       <HeaderComponent />
     </div>
   )

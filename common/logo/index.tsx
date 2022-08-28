@@ -8,6 +8,7 @@ const Logo = () => {
       alt='Facebook logo'
       width={40}
       height={40}
+      layout='fixed'
     />
   );
 }
