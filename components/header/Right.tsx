@@ -21,7 +21,9 @@ const RightComponent = () => {
         className='rounded-full'
         onClick={() => signOut()}
       />
-      <p className="whitespace-nowrap font-sem:bold pr-3">Goodnews Ofoegbu</p>
+      <p className="whitespace-nowrap font-sem:bold pr-3">
+        {session?.user?.name}
+      </p>
       <ViewGridIcon className="icon" />
       <ChatIcon className="icon" />
       <BellIcon className="icon" />
