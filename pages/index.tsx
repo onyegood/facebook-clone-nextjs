@@ -1,16 +1,12 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import HeadComponent from '../components/head'
+import HeaderComponent from '../components/header'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>Facebook</title>
-        <meta name="description" content="Social Media App" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <h1>Lets build facebook</h1>
+      <HeadComponent title='Facebook'/>
+      <HeaderComponent />
     </div>
   )
 }
