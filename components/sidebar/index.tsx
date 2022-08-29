@@ -14,7 +14,7 @@ import {
 import SidebarRow from './SidebarRow';
 
 const SidebarComponent = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   return (
     <div className='p-2 mt-5 max-w-[600px] xl:min-w-[300px]'>
       <SidebarRow src={session?.user?.image!} title={session?.user?.name!} />
