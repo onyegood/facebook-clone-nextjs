@@ -1,24 +1,30 @@
 import React from 'react'
-import Image from 'next/image';
 import { useSession } from 'next-auth/react';
+import {
+  ChevronDownIcon,
+  ShoppingBagIcon,
+  UserGroupIcon,
+} from '@heroicons/react/outline';
+import {
+  CalendarIcon,
+  ClockIcon,
+  DesktopComputerIcon,
+  UsersIcon,
+} from '@heroicons/react/solid';
+import SidebarRow from './SidebarRow';
 
 const SidebarComponent = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   return (
-    <div>
-      <div>
-      <Image
-        src={session?.user?.image!}
-        alt="Facebook login"
-        height={30}
-        width={30}
-        objectFit="contain"
-        className='rounded-full'
-      />
-      <p className="whitespace-nowrap pr-3">
-        {session?.user?.name}
-      </p>
-      </div>
+    <div className='p-2 mt-5 max-w-[600px] xl:min-w-[300px]'>
+      <SidebarRow src={session?.user?.image!} title={session?.user?.name!} />
+      <SidebarRow Icon={UsersIcon} title='Friends' />
+      <SidebarRow Icon={UserGroupIcon} title='Groups' />
+      <SidebarRow Icon={ShoppingBagIcon} title='Marketplace' />
+      <SidebarRow Icon={DesktopComputerIcon} title='Watch' />
+      <SidebarRow Icon={CalendarIcon} title='Events' />
+      <SidebarRow Icon={ClockIcon} title='Memory' />
+      <SidebarRow Icon={ChevronDownIcon} title='See More' />
     </div>
   )
 }

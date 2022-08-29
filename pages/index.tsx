@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import { getSession, GetSessionParams, useSession } from 'next-auth/react';
+import BodyComponent from '../components/body';
 import HeadComponent from '../components/head';
 import HeaderComponent from '../components/header';
 import LoginComponent from '../components/login';
-import SidebarComponent from '../components/sidebar';
 
 const Home: NextPage<{}> = () => {
   const { status } = useSession();
@@ -15,10 +15,10 @@ const Home: NextPage<{}> = () => {
         return <LoginComponent />;
       case 'authenticated':
         return (
-          <div>
+          <div className='h-screen bg-gray-100 overflow-hidden'>
             <HeadComponent title="Facebook" />
             <HeaderComponent />
-            <SidebarComponent />
+            <BodyComponent />
           </div>
         );
       default:
